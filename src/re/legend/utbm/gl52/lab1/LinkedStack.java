@@ -47,33 +47,14 @@ public class LinkedStack<ElementT> extends AbstractStack<ElementT> implements It
         first = new Node();
         first.next = oldFirst;
         first.element = newElement;
+        size++;
     }
 
     @Override
     public ElementT pop() {
         final ElementT elementToPop = first.element;
         this.first = first.next;
+        size--;
         return elementToPop;
-    }
-
-    @Override
-    public int getSize() {
-        Node node;
-        int size = 0;
-        if (first != null) {
-            node = first;
-            size++;
-            // Loop trough the elements of the stack while counting the number of elements in the stack
-            while (node.next != null) {
-                size++;
-                node = node.next;
-            }
-        }
-        return size;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return getSize()==0;
     }
 }

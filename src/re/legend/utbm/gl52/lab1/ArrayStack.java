@@ -5,22 +5,20 @@ import java.util.Iterator;
 
 public class ArrayStack<ElementT> extends AbstractStack<ElementT> implements Iterable<ElementT> {
 
-    ArrayList<ElementT> elements = new ArrayList<>();
+    private ArrayList<ElementT> elements = new ArrayList<>();
 
-    // Package private to avoid generating a synthetic accessor
     private class ArrayStackIterator implements StackIterator<ElementT>, Iterator<ElementT> {
 
         int position = 0;
 
         @Override
         public boolean hasNext() {
-            return elements.get(position + 1) != null;
+            return position < elements.size();
         }
 
         @Override
         public ElementT next() {
-            position++;
-            return elements.get(position);
+            return elements.get(position++);
         }
     }
 
@@ -32,22 +30,14 @@ public class ArrayStack<ElementT> extends AbstractStack<ElementT> implements Ite
     @Override
     public void push(ElementT t) {
         this.elements.add(t);
+        size++;
     }
 
     @Override
     public ElementT pop() {
-        ElementT element = this.elements.get(getSize() - 1);
-        this.elements.remove(getSize() - 1);
+        ElementT element = this.elements.get(size - 1);
+        this.elements.remove(size - 1);
+        size--;
         return element;
-    }
-
-    @Override
-    public int getSize() {
-        return this.elements.size();
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return this.elements.isEmpty();
     }
 }
