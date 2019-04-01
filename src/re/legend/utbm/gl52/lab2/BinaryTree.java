@@ -3,12 +3,5 @@ package re.legend.utbm.gl52.lab2;
 /**
  * 
  */
-public class BinaryTree extends AbstractBinaryTree {
-
-    /**
-     * Default constructor
-     */
-    public BinaryTree() {
-    }
-
+public class BinaryTree<D, N extends BinaryTreeNode<D,N>> extends AbstractBinaryTree<D,N> {
 }

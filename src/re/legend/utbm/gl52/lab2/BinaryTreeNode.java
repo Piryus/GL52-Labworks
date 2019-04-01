@@ -3,11 +3,20 @@ package re.legend.utbm.gl52.lab2;
 /**
  * 
  */
-public class BinaryTreeNode<D> extends AbstractBinaryTreeNode<D, BinaryTreeNode<D>> {
+public class BinaryTreeNode<D, N extends BinaryTreeNode<D,N>> extends AbstractBinaryTreeNode<D,N> {
 
     /**
-     * Default constructor
+     * Constructor with parent
      */
-    public BinaryTreeNode() {}
+    public BinaryTreeNode(D data, N parent) {
+        this.data = data;
+        this.parent = parent;
+    }
 
+    /**
+     * Constructor without parent
+     */
+    public BinaryTreeNode(D data) {
+        this.data = data;
+    }
 }

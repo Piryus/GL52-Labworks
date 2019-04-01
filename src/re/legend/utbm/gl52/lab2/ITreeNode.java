@@ -1,6 +1,6 @@
 package re.legend.utbm.gl52.lab2;
 
-import java.util.*;
+import java.util.List;
 
 /**
  * A generic tree node interface containing the common methods of every tree node
