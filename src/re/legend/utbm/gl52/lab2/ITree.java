@@ -16,4 +16,9 @@ public interface ITree<D, N extends ITreeNode<D,N>> {
      * @param node the node that will be the root of the tree
      */
     void setRoot(N node);
+
+    /**
+     * Print the tree in the console
+     */
+    void print();
 }
