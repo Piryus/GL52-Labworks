@@ -2,4 +2,8 @@
 
 ## LAB#1
 
-Implementing an ArrayStack and a LinkedStack.
+Implement an ArrayStack and a LinkedStack and their iterators.
+
+## LAB#2
+
+Implement a BinaryTree and a BinarySearchTree. Classes to use : ITree, AbstractTree, AbstractBinaryTree, AbstractBinarySearchTree, BinaryTree, BinarySearchTree, ITreeNode, AbstractTreeNode, AbstractBinaryTreeNode, BinaryTreeNode.
