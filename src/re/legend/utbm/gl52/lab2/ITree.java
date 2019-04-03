@@ -13,12 +13,27 @@ public interface ITree<D, N extends ITreeNode<D,N>> {
     int size();
 
     /**
+     * @return the height of the tree
+     */
+    int getHeight();
+
+    /**
      * @param node the node that will be the root of the tree
      */
     void setRoot(N node);
 
     /**
+     * @return the node root of the tree
+     */
+    N getRoot();
+
+    /**
      * Print the tree in the console
      */
     void print();
+
+    /**
+     * @return <code>true</code> if the tree doesn't contain any node;<code>false</code> otherwise
+     */
+    boolean isEmpty();
 }

@@ -30,5 +30,6 @@ public class Main {
             }
         }
         binaryTree.print();
+        System.out.println("Tree height : " + binaryTree.getHeight());
     }
 }
