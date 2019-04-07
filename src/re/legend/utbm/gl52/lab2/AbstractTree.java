@@ -20,6 +20,7 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
     /**
      * @return the root of the tree
      */
+    @Override
     public N getRoot() {
         return root;
     }
@@ -27,6 +28,7 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
     /**
      * @param root the root of the tree to set
      */
+    @Override
     public void setRoot(N root) {
         this.root = root;
     }
@@ -34,6 +36,7 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
     /**
      * @return the number of nodes in the tree
      */
+    @Override
     public int size() {
         return size;
     }
@@ -53,5 +56,10 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
 
             System.out.println(node.getData().toString());
         }
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return root == null;
     }
 }
