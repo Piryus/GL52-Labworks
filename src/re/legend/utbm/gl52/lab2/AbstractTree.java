@@ -45,8 +45,9 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
                 }
             }
 
-            System.out.println(node.getData().toString());
+            System.out.print(node.getData().toString() + ", ");
         }
+        System.out.println();
     }
 
     @Override
