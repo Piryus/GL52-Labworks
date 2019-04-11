@@ -36,4 +36,11 @@ public interface ITree<D, N extends ITreeNode<D,N>> {
      * @return <code>true</code> if the tree doesn't contain any node;<code>false</code> otherwise
      */
     boolean isEmpty();
+
+    /**
+     * Insert the given data into the tree and returns the node that contains the data
+     * @param data the data to add into the tree
+     * @return the node containing the data in the tree
+     */
+    N insert(D data);
 }
