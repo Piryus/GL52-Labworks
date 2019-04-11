@@ -6,8 +6,10 @@ package re.legend.utbm.gl52.lab2;
  */
 public abstract class AbstractTreeNode<D, N extends AbstractTreeNode<D,N>> implements ITreeNode<D,N> {
 
-    // The data contained in the node
-    protected D data;
+    /**
+     * the data contained in the node
+     */
+    private D data;
 
     @Override
     public D getData() {

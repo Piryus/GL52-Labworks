@@ -11,17 +11,17 @@ public abstract class AbstractBinaryTreeNode<D, N extends AbstractBinaryTreeNode
     /**
      * the parent of the node
      */
-    protected N parent;
+    private N parent;
 
     /**
      * the left child of the node
      */
-    protected N leftChild;
+    private N leftChild;
 
     /**
      * the right child of the node
      */
-    protected N rightChild;
+    private N rightChild;
 
     public void setLeftChild(N leftChild) {
         this.leftChild = leftChild;

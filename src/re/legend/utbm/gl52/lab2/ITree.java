@@ -23,7 +23,7 @@ public interface ITree<D, N extends ITreeNode<D,N>> {
     void setRoot(N node);
 
     /**
-     * @return the node root of the tree
+     * @return the root node of the tree
      */
     N getRoot();
 

@@ -10,7 +10,7 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
     /**
      * The root of the tree
      */
-    protected N root;
+    private N root;
 
     /**
      * Number of nodes in the tree

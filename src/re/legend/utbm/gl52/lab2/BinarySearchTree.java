@@ -8,6 +8,5 @@ public class BinarySearchTree<D, N extends AbstractBinaryTreeNode<D,N>> extends 
     /**
      * Default constructor
      */
-    public BinarySearchTree() {
-    }
+    public BinarySearchTree() {}
 }
