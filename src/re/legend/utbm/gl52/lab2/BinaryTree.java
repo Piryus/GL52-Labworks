@@ -17,6 +17,15 @@ public class BinaryTree<D> extends AbstractBinaryTree<D,BinaryTreeNode<D>> {
     }
 
     /**
+     * Constructor with root's data
+     * Creates the root node that stores the data
+     * @param rootData the root's data
+     */
+    public BinaryTree(D rootData) {
+        this.root = new BinaryTreeNode<>(rootData);
+    }
+
+    /**
      * Default constructor
      */
     public BinaryTree() {}
