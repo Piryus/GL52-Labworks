@@ -1,5 +1,7 @@
 package re.legend.utbm.gl52.lab2;
 
+import java.util.Collection;
+
 /**
  * Provides a generic interface for a tree with common methods
  * @param <D> the type of data stored in the tree
@@ -43,4 +45,11 @@ public interface ITree<D, N extends ITreeNode<D,N>> {
      * @return the node containing the data in the tree
      */
     N insert(D data);
+
+    /**
+     * Takes a collection and insert each element in the tree one by one
+     * @see ITree#insert(D)
+     * @param dataCollection the collection of data to insert
+     */
+    void insert(Collection<D> dataCollection);
 }

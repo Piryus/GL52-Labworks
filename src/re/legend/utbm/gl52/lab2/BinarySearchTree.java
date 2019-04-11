@@ -1,6 +1,8 @@
 package re.legend.utbm.gl52.lab2;
 
 
+import java.util.Collection;
+
 /**
  * 
  */
@@ -23,4 +25,7 @@ public class BinarySearchTree<D> extends AbstractBinarySearchTree<D, BinaryTreeN
     public BinaryTreeNode<D> insert(D data) {
         return null;
     }
+
+    @Override
+    public void insert(Collection<D> dataCollection) {}
 }

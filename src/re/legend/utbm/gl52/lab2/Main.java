@@ -1,5 +1,9 @@
 package re.legend.utbm.gl52.lab2;
 
+import java.util.ArrayList;
+
+import static java.util.Arrays.asList;
+
 import java.util.Random;
 
 public class Main {
@@ -20,10 +24,10 @@ public class Main {
         rootLeftChild.setRightChild(new BinaryTreeNode<>(125));
         BinaryTreeNode<Integer> child = rootRightChild.getRightChild();
         Random random = new Random();
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             child.setRightChild(new BinaryTreeNode<>(random.nextInt()));
             child.setLeftChild(new BinaryTreeNode<>(random.nextInt()));
-            if(i%2==0) {
+            if (i % 2 == 0) {
                 child = child.getLeftChild();
             } else {
                 child = child.getRightChild();
@@ -31,5 +35,10 @@ public class Main {
         }
         binaryTree.print();
         System.out.println("Tree height : " + binaryTree.getHeight());
+
+        // Now let's use the insert functions
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<Integer>(10);
+        binaryTree2.insert(new ArrayList<Integer>(asList(10, 50, 48945, 897, 4897, 26, 5456, 4, 54, 4, 84, 84)));
+        binaryTree2.print();
     }
 }

@@ -1,5 +1,6 @@
 package re.legend.utbm.gl52.lab2;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -82,6 +83,13 @@ public class BinaryTree<D> extends AbstractBinaryTree<D,BinaryTreeNode<D>> {
             return root;
         } else {
             return insertFirst(data, root);
+        }
+    }
+
+    @Override
+    public void insert(Collection<D> dataCollection) {
+        for (D data : dataCollection) {
+            insert(data);
         }
     }
 }
