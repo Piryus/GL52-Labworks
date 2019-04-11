@@ -62,6 +62,13 @@ public abstract class AbstractBinaryTreeNode<D, N extends AbstractBinaryTreeNode
         return parents;
     }
 
+    /**
+     * @return the parent node
+     */
+    public N getParent() {
+        return parent;
+    }
+
     @Override
     public boolean isLeaf() {
         return rightChild == null && leftChild == null;
