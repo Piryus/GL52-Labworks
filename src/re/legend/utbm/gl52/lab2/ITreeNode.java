@@ -38,5 +38,4 @@ interface ITreeNode<D, N extends ITreeNode<D,N>> {
      * @return <code>true</code> if the node doesn't have any parent;<code>false</code> otherwise
      */
     boolean isRoot();
-
 }

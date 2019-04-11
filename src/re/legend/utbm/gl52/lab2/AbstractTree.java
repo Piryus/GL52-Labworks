@@ -10,32 +10,23 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
     /**
      * The root of the tree
      */
-    private N root;
+    protected N root;
 
     /**
      * Number of nodes in the tree
      */
-    private int size;
+    protected int size;
 
-    /**
-     * @return the root of the tree
-     */
     @Override
     public N getRoot() {
         return root;
     }
 
-    /**
-     * @param root the root of the tree to set
-     */
     @Override
     public void setRoot(N root) {
         this.root = root;
     }
 
-    /**
-     * @return the number of nodes in the tree
-     */
     @Override
     public int size() {
         return size;

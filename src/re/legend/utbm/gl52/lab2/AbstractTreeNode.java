@@ -9,7 +9,7 @@ public abstract class AbstractTreeNode<D, N extends AbstractTreeNode<D,N>> imple
     /**
      * the data contained in the node
      */
-    private D data;
+    protected D data;
 
     @Override
     public D getData() {
