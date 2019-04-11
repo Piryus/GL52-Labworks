@@ -8,11 +8,11 @@ public class Main {
 
         // Generates an ArrayStack
         System.out.println("Creating a new ArrayStack...");
-        ArrayStack arrayStack = new ArrayStack();
+        ArrayStack<Integer> arrayStack = new ArrayStack<>();
 
         // Generates a LinkedStack
         System.out.println("Creating a new LinkedStack...");
-        LinkedStack linkedStack = new LinkedStack();
+        LinkedStack<Integer> linkedStack = new LinkedStack<>();
 
         // Fills both stacks with the same integers
         int rand;
