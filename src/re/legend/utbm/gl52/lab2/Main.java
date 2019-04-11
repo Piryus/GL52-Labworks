@@ -34,11 +34,12 @@ public class Main {
             }
         }
         binaryTree.print();
-        System.out.println("Tree height : " + binaryTree.getHeight());
+        System.out.println("First tree height : " + binaryTree.getHeight());
 
-        // Now let's use the insert functions
-        BinaryTree<Integer> binaryTree2 = new BinaryTree<Integer>(10);
-        binaryTree2.insert(new ArrayList<Integer>(asList(10, 50, 48945, 897, 4897, 26, 5456, 4, 54, 4, 84, 84)));
+        // Now let's use the insert function to fill a new tree
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(10);
+        binaryTree2.insert(new ArrayList<>(asList(10, 50, 48945, 897, 4897, 26, 5456, 4, 54, 4, 84, 84)));
         binaryTree2.print();
+        System.out.println("Second tree height : " + binaryTree2.getHeight());
     }
 }
