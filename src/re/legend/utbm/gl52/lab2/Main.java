@@ -41,5 +41,6 @@ public class Main {
         binaryTree2.insert(new ArrayList<>(asList(10, 50, 48945, 897, 4897, 26, 5456, 4, 54, 4, 84, 84)));
         binaryTree2.print();
         System.out.println("Second tree height : " + binaryTree2.getHeight());
+        System.out.println("Second tree size : " + binaryTree2.size());
     }
 }

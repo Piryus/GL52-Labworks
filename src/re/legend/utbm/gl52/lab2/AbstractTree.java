@@ -12,11 +12,6 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
      */
     protected N root;
 
-    /**
-     * Number of nodes in the tree
-     */
-    protected int size;
-
     @Override
     public N getRoot() {
         return root;
@@ -29,7 +24,19 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
 
     @Override
     public int size() {
-        return size;
+        return size(this.root) + 1;
+    }
+
+    private int size(N node) {
+        int size = 0;
+        if (node == null) {
+            return size;
+        } else {
+            for(N child : node.getChildren()) {
+                size += size(child) + 1;
+            }
+            return size;
+        }
     }
 
     @Override
