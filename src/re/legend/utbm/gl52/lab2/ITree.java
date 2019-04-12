@@ -52,4 +52,10 @@ public interface ITree<D, N extends ITreeNode<D,N>> {
      * @param dataCollection the collection of data to insert
      */
     void insert(Collection<D> dataCollection);
+
+    /**
+     * Remove the given element from the tree
+     * @param data the data to remoe from the tree
+     */
+    void remove(D data);
 }
