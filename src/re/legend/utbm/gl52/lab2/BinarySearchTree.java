@@ -48,5 +48,9 @@ public class BinarySearchTree<D extends Comparable<D>> extends AbstractBinarySea
     }
 
     @Override
-    public void insert(Collection<D> dataCollection) {}
+    public void insert(Collection<D> dataCollection) {
+        for (D element : dataCollection) {
+            insert(element);
+        }
+    }
 }
