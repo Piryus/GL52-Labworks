@@ -54,8 +54,10 @@ public interface ITree<D, N extends ITreeNode<D,N>> {
     void insert(Collection<D> dataCollection);
 
     /**
-     * Remove the given element from the tree
-     * @param data the data to remoe from the tree
+     * Try to remove the given element from the tree
+     * Method of deletion depends of the type of tree
+     * @param data the data to remove from the tree
+     * @return <code>true</code> if the given element was found and deleted at least once;<code>false</code> otherwise
      */
-    void remove(D data);
+    boolean remove(D data);
 }
