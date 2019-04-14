@@ -62,6 +62,10 @@ public abstract class AbstractBinaryTreeNode<D, N extends AbstractBinaryTreeNode
         return parents;
     }
 
+    @Override public void setParent(N parent) {
+        this.parent = parent;
+    }
+
     /**
      * @return the parent node
      */

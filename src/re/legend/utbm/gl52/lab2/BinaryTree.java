@@ -56,6 +56,7 @@ public class BinaryTree<D> extends AbstractBinaryTree<D,BinaryTreeNode<D>> {
             if (node.getLeftChild() == null) {
                 // ... if it doesn't, we have find the free slot for the new node !
                 node.setLeftChild(new BinaryTreeNode<D>(data, node));
+                node.getLeftChild().setParent(node);
                 return node.getLeftChild();
             } else {
                 // ... if it does, we add the child to the queue
@@ -65,6 +66,7 @@ public class BinaryTree<D> extends AbstractBinaryTree<D,BinaryTreeNode<D>> {
             // Same thing for the right side
             if (node.getRightChild() == null) {
                 node.setRightChild(new BinaryTreeNode<D>(data, node));
+                node.getRightChild().setParent(node);
                 return node.getRightChild();
             } else {
                 queue.add(node.getRightChild());
