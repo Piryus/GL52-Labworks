@@ -30,6 +30,12 @@ interface ITreeNode<D, N extends ITreeNode<D,N>> {
     List<N> getParents();
 
     /**
+     * Sets node's parent
+     * @param parent the parent of the node
+     */
+    void setParent(N parent);
+
+    /**
      * @return <code>true</code> if the node doesn't have any child;<code>false</code> otherwise
      */
     boolean isLeaf();

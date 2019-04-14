@@ -61,9 +61,4 @@ public abstract class AbstractTree<D, N extends AbstractTreeNode<D,N>> implement
     public boolean isEmpty() {
         return root == null;
     }
-
-    @Override
-    public void remove(D data) {
-
-    }
 }
