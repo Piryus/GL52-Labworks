@@ -38,6 +38,15 @@ public class Main {
 
         // Now let's use the insert function to fill a new tree
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(10);
+        /* Tree :
+                     10
+                  /      \
+                 10       50
+                /  \     /   \
+            48945  897  4897  26
+            /  \  / \   /  \
+         5456  4 54  4 84  84
+         */
         binaryTree2.insert(new ArrayList<>(asList(10, 50, 48945, 897, 4897, 26, 5456, 4, 54, 4, 84, 84)));
         binaryTree2.print();
         System.out.println("Second tree height : " + binaryTree2.getHeight());
@@ -46,6 +55,15 @@ public class Main {
         System.out.println("Retrieving and deleting " + binaryTree2.getRoot().getLeftChild().getLeftChild().getData() + " from this binary tree...");
         binaryTree2.remove(binaryTree2.getRoot().getLeftChild().getLeftChild().getData());
         binaryTree2.print();
+        /* New Tree :
+                     10
+                  /      \
+                 10       50
+                /  \     /   \
+              84  897  4897  26
+            /  \  / \   |
+         5456  4 54  4  84
+         */
         System.out.println("New tree height : " + binaryTree2.getHeight());
         System.out.println("New tree size : " + binaryTree2.size());
 
