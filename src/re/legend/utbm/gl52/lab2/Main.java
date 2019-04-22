@@ -43,7 +43,7 @@ public class Main {
         System.out.println("Second tree height : " + binaryTree2.getHeight());
         System.out.println("Second tree size : " + binaryTree2.size());
         // Deleting an element test
-        System.out.println("Retrieving and deleting 4 from this binary tree...");
+        System.out.println("Retrieving and deleting " + binaryTree2.getRoot().getLeftChild().getLeftChild().getData() + " from this binary tree...");
         binaryTree2.remove(binaryTree2.getRoot().getLeftChild().getLeftChild().getData());
         binaryTree2.print();
         System.out.println("New tree height : " + binaryTree2.getHeight());
