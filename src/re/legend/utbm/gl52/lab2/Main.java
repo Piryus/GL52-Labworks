@@ -48,5 +48,11 @@ public class Main {
         binaryTree2.print();
         System.out.println("New tree height : " + binaryTree2.getHeight());
         System.out.println("New tree size : " + binaryTree2.size());
+
+        System.out.println("Using iterator to do a Breadth-First traversal of this tree :");
+        BreadthFirstBSTIterator<Integer> breadthFirstBSTIterator = new BreadthFirstBSTIterator<>(binaryTree2.getRoot());
+        while(breadthFirstBSTIterator.hasNext()) {
+            System.out.print(breadthFirstBSTIterator.next() + ", ");
+        }
     }
 }
