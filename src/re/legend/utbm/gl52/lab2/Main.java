@@ -72,5 +72,12 @@ public class Main {
         while(breadthFirstBSTIterator.hasNext()) {
             System.out.print(breadthFirstBSTIterator.next() + ", ");
         }
+        System.out.println();
+
+        System.out.println("Using iterator to do a Depth-First traversal of this tree :");
+        DepthFirstBSTIterator<Integer> depthFirstBSTIterator = new DepthFirstBSTIterator<>(binaryTree2.getRoot());
+        while(depthFirstBSTIterator.hasNext()) {
+            System.out.print(depthFirstBSTIterator.next() + ", ");
+        }
     }
 }
