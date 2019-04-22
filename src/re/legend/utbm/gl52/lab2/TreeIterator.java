@@ -9,7 +9,7 @@ public abstract class TreeIterator<D, N extends AbstractTreeNode<D, N>> {
     /**
      * The root of the explored tree
      */
-    N root;
+    protected N root;
 
     /**
      * Return the next element in the tree
