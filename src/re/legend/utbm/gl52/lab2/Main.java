@@ -79,5 +79,12 @@ public class Main {
         while(depthFirstBSTIterator.hasNext()) {
             System.out.print(depthFirstBSTIterator.next() + ", ");
         }
+        System.out.println();
+
+        System.out.println("Using iterator to do an Inorder traversal of this tree :");
+        InorderBSTIterator<Integer> inorderBSTIterator = new InorderBSTIterator<>(binaryTree2.getRoot());
+        while(inorderBSTIterator.hasNext()) {
+            System.out.print(inorderBSTIterator.next() + ", ");
+        }
     }
 }
