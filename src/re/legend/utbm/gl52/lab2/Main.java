@@ -86,5 +86,10 @@ public class Main {
         while(inorderBSTIterator.hasNext()) {
             System.out.print(inorderBSTIterator.next() + ", ");
         }
+        System.out.println();
+
+        System.out.println("Adding a listener to the tree...");
+        binaryTree2.addListener(new SimpleBSTListener<>());
+        binaryTree2.insert(asList(10, 50, 89, 45));
     }
 }

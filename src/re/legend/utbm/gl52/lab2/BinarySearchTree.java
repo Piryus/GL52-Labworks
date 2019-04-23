@@ -28,7 +28,9 @@ public class BinarySearchTree<D extends Comparable<D>> extends AbstractBinarySea
      */
     @Override
     public BinaryTreeNode<D> insert(D data) {
-        return insert(data, root);
+        BinaryTreeNode<D> newNode = insert(data, root);
+        notifyListeners(newNode);
+        return newNode;
     }
 
     private BinaryTreeNode<D> insert(D data, BinaryTreeNode<D> node) {
